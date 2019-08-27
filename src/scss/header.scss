@@ -1,0 +1,13 @@
+.header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    background-color: lightgrey;
+    h1 {
+      font-size: 4.5em;
+      font-weight: bold;
+      font-family: 'Handlee', cursive;
+      margin: 25px 10px;
+    }
+  }
