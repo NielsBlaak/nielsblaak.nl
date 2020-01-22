@@ -5,14 +5,14 @@ import './App.scss';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Timeline from './components/Timeline';
-import Experience from './components/Experience';
+// import Experience from './components/Experience';
 
 const App = () => (
     <div className="App">
       <Grid container>
         <Header />
         <Timeline />
-        <Experience />
+        {/* <Experience /> */}
         <Footer />
       </Grid>
     </div>
