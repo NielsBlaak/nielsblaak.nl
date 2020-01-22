@@ -5,9 +5,9 @@ import '../scss/footer.scss';
 const Footer = () => (
     <Grid item xs={12}>
         <div className="footer">
-            <p>Follow me on LinkedIn: <a href="https://www.linkedin.com/in/niels-blaak-2a1219b7/">Niels Blaak</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/niels-blaak-2a1219b7/">Niels Blaak</a></p>
         </div>
     </Grid>
 );
 
-export default Footer;
+export default React.memo(Footer);
