@@ -3,17 +3,37 @@ import { Grid } from '@material-ui/core';
 import './App.scss';
 
 import Header from './components/Header';
-import Footer from './components/Footer';
-import Timeline from './components/Timeline';
+// import Footer from './components/Footer';
+
+import Home   from './pages/Home';
+// import Experience   from './pages/Experience';
+import { TussenstandPage }  from './pages/Tussenstand';
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 // import Experience from './components/Experience';
 
 const App = () => (
     <div className="App">
       <Grid container>
-        <Header />
-        <Timeline />
-        {/* <Experience /> */}
-        <Footer />
+          <Header />
+            <Router>
+                <Switch>
+					          <Route path="/fifa" >
+                        <TussenstandPage />
+                    </Route>
+					          {/* <Route path="/ervaring">
+                        <Experience />
+                    </Route> */}
+                    <Route path="/" >
+                        <Home />
+                    </Route>
+                </Switch>
+            </Router>
+        {/* <Footer /> */}
       </Grid>
     </div>
 );
