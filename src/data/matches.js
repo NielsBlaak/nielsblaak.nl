@@ -64,7 +64,9 @@ export const matches = [
         },
         {
             "homeTeam": "RKC Waalwijk (Roan_02)",
-            "awayTeam": "FC Groningen (Ricogw)"
+            "awayTeam": "FC Groningen (Ricogw)",
+            "homeGoals": 4,
+            "awayGoals": 2
         },
         {
             "homeTeam": "Willem II (derodny)",
@@ -92,13 +94,17 @@ export const matches = [
         },
         {
             "homeTeam": "AZ (Ketsieh)",
-            "awayTeam": "ADO Den Haag (Wouter97_NL)"
+            "awayTeam": "ADO Den Haag (Wouter97_NL)",
+            "homeGoals": 6,
+            "awayGoals": 2
         }
     ],
     [
         {
             "homeTeam": "FC Emmen (Mitch-pancake-nl)",
-            "awayTeam": "VVV-Venlo (Niels97_NL)"
+            "awayTeam": "VVV-Venlo (Niels97_NL)",
+            "homeGoals": 3,
+            "awayGoals": 3
         },
         {
             "homeTeam": "FC Utrecht (Jowie97_NL)",
@@ -106,23 +112,33 @@ export const matches = [
         },
         {
             "homeTeam": "PEC Zwolle (robiinn1991)",
-            "awayTeam": "sc Heerenveen (Timma_NL)"
+            "awayTeam": "sc Heerenveen (Timma_NL)",
+            "homeGoals": 0,
+            "awayGoals": 4
         },
         {
             "homeTeam": "Sparta Rotterdam (DITISRUBEN-YT)",
-            "awayTeam": "RKC Waalwijk (Roan_02)"
+            "awayTeam": "RKC Waalwijk (Roan_02)",
+            "homeGoals": 0,
+            "awayGoals": 6
         },
         {
             "homeTeam": "Vitesse (Kegel_1991)",
-            "awayTeam": "Willem II (derodny)"
+            "awayTeam": "Willem II (derodny)",
+            "homeGoals": 4,
+            "awayGoals": 1
         },
         {
             "homeTeam": "Feyenoord (Lennardmunne_NL)",
-            "awayTeam": "Ajax (Nick03_NL)"
+            "awayTeam": "Ajax (Nick03_NL)",
+            "homeGoals": 1,
+            "awayGoals": 3
         },
         {
             "homeTeam": "ADO Den Haag (Wouter97_NL)",
-            "awayTeam": "FC Twente (Murdog_NL)"
+            "awayTeam": "FC Twente (Murdog_NL)",
+            "homeGoals": 5,
+            "awayGoals": 1
         },
         {
             "homeTeam": "AZ (Ketsieh)",
