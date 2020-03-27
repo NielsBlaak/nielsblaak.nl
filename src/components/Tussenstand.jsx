@@ -17,11 +17,11 @@ const Tussenstand = () => {
                 if (matchday === i) {
                     return match.map(result => {
                         return (
-                                <tr>
-                                    <td>{result.homeTeam}</td>
-                                    <td>{result.awayTeam}</td>
-                                    <td>{result.homeGoals} - {result.awayGoals}</td>
-                                </tr>
+                            <tr>
+                                <td>{result.homeTeam}</td>
+                                <td>{result.awayTeam}</td>
+                                <td>{result.homeGoals} - {result.awayGoals}</td>
+                            </tr>
                         )
                     })
                 } else return null;
