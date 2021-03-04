@@ -79,4 +79,4 @@ class League {
     }
   }
   
-  module.exports = League;
+export default League;
