@@ -8,6 +8,7 @@ import Header from './components/Header';
 import Home   from './pages/Home';
 // import Experience   from './pages/Experience';
 import { TussenstandPage }  from './pages/Tussenstand';
+import { Euro } from './pages/EK';
 
 import {
   BrowserRouter as Router,
@@ -25,9 +26,9 @@ const App = () => (
 					          <Route path="/fifa" >
                         <TussenstandPage />
                     </Route>
-					          {/* <Route path="/ervaring">
-                        <Experience />
-                    </Route> */}
+                    <Route path="/ek" >
+                        <Euro />
+                    </Route>
                     <Route path="/" >
                         <Home />
                     </Route>

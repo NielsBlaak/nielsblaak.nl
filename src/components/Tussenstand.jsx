@@ -1,9 +1,12 @@
-import React    from 'react';
-// import { teams }    from '../data/teams';
-import { matches }  from '../data/matches';
+import React from 'react';
 
-const Tussenstand = () => {
+const Tussenstand = ({ matches }) => {
     const [matchday, setMatchday] = React.useState(0);
+
+    // const save = (homeGoals, awayGoals, i) => {
+    //     Object.assign(matches[matchday][i], {homeGoals: homeGoals, awayGoals: awayGoals});
+    // }
+
     return (
         <div style={{textAlign: 'center', width: '100%'}}>
             <h1>Uitslagen</h1>
@@ -17,11 +20,18 @@ const Tussenstand = () => {
                 if (matchday === i) {
                     return match.map(result => {
                         return (
-                            <tr>
-                                <td>{result.homeTeam}</td>
-                                <td>{result.awayTeam}</td>
-                                <td>{result.homeGoals} - {result.awayGoals}</td>
-                            </tr>
+                            <>
+                                <tr>
+                                    <td>{result.homeTeam}</td>
+                                    <td>{result.awayTeam}</td>
+                                    <td>{result.homeGoals} - {result.awayGoals}</td>
+                                </tr>
+                                {/* <tr>
+                                    <td><input type="number" id="input1" name="homeGoals" /></td>
+                                    <td><input type="number" id="input2" name="awayGoals" /></td>        
+                                    <td><button onClick={() => save(document.getElementById('input1').value, document.getElementById('input2').value, i)}>Opslaan</button></td>
+                                </tr> */}
+                            </>
                         )
                     })
                 } else return null;

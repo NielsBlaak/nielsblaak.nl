@@ -2,13 +2,13 @@ import React        from 'react';
 import orderBy      from 'lodash/orderBy';
 
 import League       from '../data/league';
-import { matches }  from '../data/flatMatches';
+import { matches }  from '../ek/matches';
 
 import { Table, TableBody, TableCell, TableHead, TableRow } from '@material-ui/core';
 import '../scss/table.scss';
 
 const LeagueTable = () => {
-    const league = new League(matches);
+    const league = new League(matches.flat());
     const standings = league.getStandings();
     return (
         <>

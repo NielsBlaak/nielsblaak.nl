@@ -2,7 +2,7 @@
   "name": "nielsblaak",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://nielsblaak.github.io/nielsblaak.github.io",
+  "homepage": "https://nielsblaak.nl",
   "dependencies": {
     "@material-ui/core": "^4.3.3",
     "firebase": "^7.12.0",
