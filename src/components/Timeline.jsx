@@ -16,11 +16,10 @@ const Timeline = () => (
                 >
                     <h3 className="vertical-timeline-element-title">Hatsa!</h3>
                     <p>
-                        Na het afronden van mijn MBO opleiding ben ik blijven werken bij het toenmalige OOShopping.nl.
-                        OO Shopping is stop gezet en er is een nieuw platform: <a href="https://www.hatsa.com">Hatsa!</a>
+                        werkzaam als developer bij het socialshoppingplatform <a href="https://www.hatsa.com">Hatsa!</a>
                     </p>
             </VerticalTimelineElement>
-            <VerticalTimelineElement
+            {/* <VerticalTimelineElement
                     className="vertical-timeline-element--work"
                     date="september 2015 - februari 2016"
                     iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
@@ -59,7 +58,7 @@ const Timeline = () => (
                     <p>
                         MBO Opleiding Applicatie en mediaontwikkeling aan de Techniek college Rotterdam.
                     </p>
-            </VerticalTimelineElement>
+            </VerticalTimelineElement> */}
             <VerticalTimelineElement
                 className="vertical-timeline-element--work"
                 date="1997 - nu"
