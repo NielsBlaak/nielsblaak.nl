@@ -5,24 +5,31 @@
   "homepage": "https://nielsblaak.nl",
   "dependencies": {
     "@material-ui/core": "^4.3.3",
+    "concurrently": "^6.1.0",
     "firebase": "^7.12.0",
     "lodash": "4.17.15",
     "node-sass": "^4.12.0",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.3.0",
+    "postcss-preset-env": "^6.7.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "5.1.2",
     "react-scripts": "3.1.0",
     "react-table": "7.0.0",
     "react-vertical-timeline-component": "^2.4.0",
-    "serve": "^11.3.0"
+    "serve": "^11.3.0",
+    "tailwindcss": "^2.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "concurrently \"react-scripts start\" \"yarn start-tailwind\"",
+    "build": "yarn build-tailwind && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "start-tailwind": "yarn build-tailwind -w",
+    "build-tailwind": "postcss src/index.scss -o src/tailwind.build.css --verbose"
   },
   "eslintConfig": {
     "extends": "react-app"
