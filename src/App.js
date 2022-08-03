@@ -7,7 +7,9 @@ import Header from './components/Header';
 
 import Home   from './pages/Home';
 // import Experience   from './pages/Experience';
-import { TussenstandPage }  from './pages/Tussenstand';
+import { TussenstandPage } from './pages/Tussenstand';
+import Product from './pages/Product';
+import Feed from './pages/Feed';
 import { Euro } from './pages/EK';
 
 import {
@@ -28,6 +30,12 @@ const App = () => (
                     </Route>
                     <Route path="/ek" >
                         <Euro />
+                    </Route>
+                    <Route exact path="/feed" >
+                        <Feed />
+                    </Route>
+                    <Route path="/product" >
+                        <Product />
                     </Route>
                     <Route path="/" >
                         <Home />
