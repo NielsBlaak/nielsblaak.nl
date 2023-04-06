@@ -3,34 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://nielsblaak.nl",
-  "dependencies": {
-    "@material-ui/core": "^4.3.3",
-    "concurrently": "^6.1.0",
-    "firebase": "^7.12.0",
-    "lodash": "4.17.15",
-    "node-sass": "^4.12.0",
-    "postcss": "^8.1.7",
-    "postcss-cli": "^8.3.0",
-    "postcss-preset-env": "^6.7.0",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-helmet": "^6.1.0",
-    "react-router-dom": "5.1.2",
-    "react-scripts": "3.1.0",
-    "react-table": "7.0.0",
-    "react-vertical-timeline-component": "^2.4.0",
-    "serve": "^11.3.0",
-    "tailwindcss": "^2.1.2"
-  },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"yarn start-tailwind\"",
-    "build": "yarn build-tailwind && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start-tailwind": "yarn build-tailwind -w",
-    "build-tailwind": "postcss src/index.scss -o src/tailwind.build.css --verbose"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-vertical-timeline-component": "^3.6.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -48,6 +30,12 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^3.1.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.3.1",
+    "typescript": "5.0.3"
   }
 }

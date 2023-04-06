@@ -1,13 +1,9 @@
-import React    from 'react';
-import { Grid } from '@material-ui/core';
-import '../scss/header.scss';
+import React from 'react';
 
 const Header = () => (
-    <Grid item xs={12}>
-        <div className="header">
-            <h1>Niels Blaak</h1>
-        </div>
-    </Grid>
+    <div className="flex flex-col items-center justify-center bg-slate-300 py-6 text-black">
+        <h1 className="text-4xl font-mono border-r-2 border-black tracking-widest animate-blingking">Niels Blaak</h1>
+    </div>
 );
 
 export default React.memo(Header);
