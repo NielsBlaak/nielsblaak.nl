@@ -12,8 +12,7 @@
     "clsx": "^1.2.1",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "react-vertical-timeline-component": "^3.6.0"
+    "react-dom": "latest"
   },
   "eslintConfig": {
     "extends": "react-app"

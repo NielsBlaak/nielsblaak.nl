@@ -11,7 +11,9 @@ const HighlightApp = ({ image, className, title, description, years }) => {
           <h1 className="text-white font-bold text-4xl">{title}</h1>
           <p className="text-white mt-2">{description}</p>
         </div>
-        <span className="font-mono mt-4 mr-0 ml-auto text-white">{years}</span>
+        <span className="font-mono mt-4 mr-0 ml-auto text-white w-64">
+          {years}
+        </span>
       </Layout>
     </div>
   );

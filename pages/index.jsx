@@ -1,17 +1,16 @@
 import React from "react";
-import Timeline from "../src/components/Timeline";
 import hatsa from "../asset/images/apps/hatsa.png";
 import HighlightApp from "../src/components/HighlightApp";
 
 const App = () => (
   <div className="bg-white">
-    <Timeline />
+    <h1 className="text-center text-4xl py-4">Mijn projecten</h1>
     <HighlightApp
       image={hatsa}
       className="bg-hatsa"
-      title="Dit is een titel"
-      description="Dit is een mooi stukje tekst"
-      years="2016 - heden"
+      title="Hatsa!"
+      description="Hatsa is jouw online shoppingbuddy. Wij helpen alle online shoppers met het doen en organiseren van (toekomstige) online aankopen. Zo helpt Hatsa de dromen van online shoppers waar te maken."
+      years="2016 - 2023"
     />
   </div>
 );

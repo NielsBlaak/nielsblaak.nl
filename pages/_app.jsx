@@ -5,7 +5,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <main className="mx-4 md:mx-auto">
+      <main className="md:mx-auto">
         <Component {...pageProps} />
       </main>
     </>
