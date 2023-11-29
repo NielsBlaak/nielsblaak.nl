@@ -1,12 +1,13 @@
 import Phone from "../components/Phone";
 import Layout from "../components/Layout";
+import Image from "next/image";
 import clsx from "clsx";
 
-const HighlightApp = ({ image, className, title, description, years }) => {
+const HighlightApp = ({ image, className, title, description, years, showPhone }) => {
   return (
     <div className={clsx(className)}>
       <Layout>
-        <Phone image={image} />
+        {showPhone && <Phone image={image} />}
         <div className="ml-8 mt-4">
           <h1 className="text-white font-bold text-4xl">{title}</h1>
           <p className="text-white mt-2">{description}</p>
