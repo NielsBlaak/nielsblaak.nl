@@ -1,8 +1,4 @@
 {
-  "trailingComma": "none",
-  "arrowParens": "avoid",
-  "printWidth": 180,
-  "bracketSameLine": true,
-  "htmlWhitespaceSensitivity": "ignore",
-  "singleQuote": true
+  "tabWidth": 2,
+  "useTabs": false
 }
