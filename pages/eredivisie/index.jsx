@@ -37,7 +37,7 @@ const Eredivisie = () => {
   const sortedPredictions = Object.entries(correctPredictions).sort(
     (a, b) => b[1].count - a[1].count
   );
-
+  console.log(stand);
   return (
     <div className="flex flex-col items-center gap-4 bg-white">
       <h1 className="text-center text-4xl py-4">
@@ -62,15 +62,30 @@ const Eredivisie = () => {
                 {naam}
               </strong>
               {Object.values(voorspelling).map((v, i) => (
-                <p key={v}>{i + 1}. {v}</p>
+                <p key={v}>
+                  {i + 1}. {v}
+                </p>
               ))}
             </div>
           ))}
         </div>
       </div>
       <div className="my-24">
-        <p className="text-center border-b-grey border-b w-5/6 mb-4 mx-auto">Eredivisie stand</p>
-        {typeof stand === 'string' ? <p className="text-center">Als je dit leest zijn de API calls voor vandaag op. Kom morgen terug&hellip;</p> : stand}
+        <p className="text-center border-b-grey border-b w-5/6 mb-4 mx-auto">
+          Eredivisie stand
+        </p>
+        {typeof stand === "string" ? (
+          <p className="text-center">
+            Als je dit leest zijn de API calls voor vandaag op. Kom morgen
+            terug&hellip;
+          </p>
+        ) : (
+          Object.values(stand).map((v, i) => (
+            <p key={v}>
+              {i + 1}. {v}
+            </p>
+          ))
+        )}
       </div>
     </div>
   );
