@@ -55,7 +55,7 @@ const Eredivisie = () => {
       })}
       <div className="mt-24">
         <p className="text-center text-xl mb-16">Voorspellingen</p>
-        <div className="grid grid-cols-2 mb:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {Object.entries(voorspellingen).map(([naam, voorspelling]) => (
             <div key={naam} className="py-4 px-8">
               <strong className="mb-4 border-b-grey border-b block">
