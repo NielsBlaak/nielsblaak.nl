@@ -1,25 +1,29 @@
 export const voorspellingen = {
-    Niels: {
-        1: "Feyenoord",
-        2: "PSV Eindhoven",
-        3: "Ajax",
-        4: "AZ Alkmaar",
-        5: "Twente",
-        6: "Sparta Rotterdam",
-        7: "Heerenveen",
-        8: "Utrecht",
-        9: "Vitesse",
-        10: "Fortuna Sittard",
-        11: "NEC Nijmegen",
-        12: "Heracles",
-        13: "Excelsior",
-        14: "GO Ahead Eagles",
-        15: "Waalwijk",
-        16: "PEC Zwolle",
-        17: "FC Volendam",
-        18: "Almere City FC"
+  Niels: {
+    league: {
+      1: "Feyenoord",
+      2: "PSV Eindhoven",
+      3: "Ajax",
+      4: "AZ Alkmaar",
+      5: "Twente",
+      6: "Sparta Rotterdam",
+      7: "Heerenveen",
+      8: "Utrecht",
+      9: "Vitesse",
+      10: "Fortuna Sittard",
+      11: "NEC Nijmegen",
+      12: "Heracles",
+      13: "Excelsior",
+      14: "GO Ahead Eagles",
+      15: "Waalwijk",
+      16: "PEC Zwolle",
+      17: "FC Volendam",
+      18: "Almere City FC"
     },
-    Tim: {
+    topscorers: ['Giménez', 'de Jong', 'Bergwijn']
+  },
+  Tim: {
+    league: {
       1: "Feyenoord",
       2: "PSV Eindhoven",
       3: "Ajax",
@@ -39,7 +43,10 @@ export const voorspellingen = {
       17: "FC Volendam",
       18: "Almere City FC"
     },
-    Joeri: {
+    topscorers: ['Giménez', 'Adjei Brobbey', 'Ugalde']
+  },
+  Joeri: {
+    league: {
       1: "Feyenoord",
       2: "PSV Eindhoven",
       3: "AZ Alkmaar",
@@ -59,7 +66,10 @@ export const voorspellingen = {
       17: "Go Ahead",
       18: "Almere City FC"
     },
-    Leon: {
+    topscorers: ['Giménez', 'Douvikas', 'de Jong']
+  },
+  Leon: {
+    league: {
       1: "Feyenoord",
       2: "AZ Alkmaar",
       3: "Ajax",
@@ -79,7 +89,10 @@ export const voorspellingen = {
       17: "Waalwijk",
       18: "Almere City FC"
     },
-    Manus: {
+    topscorers: ['Giménez', 'Adjei Brobbey', 'Karlsbakk']
+  },
+  Manus: {
+    league: {
       1: "Feyenoord",
       2: "PSV Eindhoven",
       3: "Ajax",
@@ -99,7 +112,10 @@ export const voorspellingen = {
       17: "FC Volendam",
       18: "Almere City FC"
     },
-    Martijn: {
+    topscorers: ['Giménez', 'Agrafiotis', 'de Jong']
+  },
+  Martijn: {
+    league: {
       1: "Feyenoord",
       2: "PSV Eindhoven",
       3: "Ajax",
@@ -119,7 +135,10 @@ export const voorspellingen = {
       17: "FC Volendam",
       18: "Almere City FC"
     },
-    Myron: {
+    topscorers: ['Giménez', 'Adjei Brobbey', 'Lauritsen']
+  },
+  Myron: {
+    league: {
       1: "Feyenoord",
       2: "Ajax",
       3: "AZ Alkmaar",
@@ -139,7 +158,10 @@ export const voorspellingen = {
       17: "Waalwijk",
       18: "Almere City FC"
     },
-    Wouter: {
+    topscorers: ['Giménez', 'Bergwijn', 'Lang']
+  },
+  Wouter: {
+    league: {
       1: "Feyenoord",
       2: "PSV Eindhoven",
       3: "AZ Alkmaar",
@@ -158,5 +180,33 @@ export const voorspellingen = {
       16: "NEC Nijmegen",
       17: "FC Volendam",
       18: "Almere City FC"
-    }
+    },
+    topscorers: ['Giménez', 'Pavlidis', 'de Jong']
   }
+};
+
+const mockData = {
+  person: {
+    league: {
+      1: "Feyenoord",
+      2: "PSV Eindhoven",
+      3: "Ajax",
+      4: "AZ Alkmaar",
+      5: "Twente",
+      6: "Sparta Rotterdam",
+      7: "Heerenveen",
+      8: "Utrecht",
+      9: "Vitesse",
+      10: "Fortuna Sittard",
+      11: "NEC Nijmegen",
+      12: "Heracles",
+      13: "Excelsior",
+      14: "GO Ahead Eagles",
+      15: "Waalwijk",
+      16: "PEC Zwolle",
+      17: "FC Volendam",
+      18: "Almere City FC"
+    },
+    topscorers: ['Giménez', 'de Jong', 'Bergwijn']
+  },
+}
