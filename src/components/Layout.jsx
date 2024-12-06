@@ -1,7 +1,9 @@
-const Layout = ({ children }) => (
-  <div className="flex flex-col-reverse md:flex-row mx-auto max-w-screen-lg px-4 py-8">
-    {children}
-  </div>
-);
+function Layout({ children }) {
+  return (
+    <div className="mx-auto flex max-w-screen-lg flex-col-reverse px-4 py-8 md:flex-row">
+      {children}
+    </div>
+  );
+}
 
 export default Layout;

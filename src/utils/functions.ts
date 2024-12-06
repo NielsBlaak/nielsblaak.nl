@@ -12,13 +12,13 @@ export function countCorrectPredictions(voorspellingen, stand, topscorers) {
 
     if (
       voorspellingen[person].topscorers?.filter((e) =>
-        topscorers.map((player) => player.lastname).includes(e)
+        topscorers.map((player) => player.lastname).includes(e),
       ).length
     ) {
       correctPredictions[person].count += voorspellingen[
         person
       ].topscorers?.filter((e) =>
-        topscorers.map((player) => player.lastname).includes(e)
+        topscorers.map((player) => player.lastname).includes(e),
       ).length;
       voorspellingen[person].topscorers?.forEach((e) => {
         if (topscorers.map((player) => player.lastname).includes(e)) {
@@ -33,7 +33,7 @@ export function countCorrectPredictions(voorspellingen, stand, topscorers) {
 
 export function simplifyStandings(apiResponse) {
   if (!apiResponse.response[0]) {
-    return "No result";
+    return 'No result';
   }
   const standings = apiResponse.response[0].league.standings[0];
   const simplifiedStandings = {};

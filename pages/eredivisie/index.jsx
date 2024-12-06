@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { voorspellingen } from "../../src/data/voorspellingen-2324";
+import React, { useEffect, useState } from 'react';
+import { voorspellingen } from '../../src/data/voorspellingen-2324';
 import {
-  simplifyStandings,
   countCorrectPredictions,
   simplifyPlayerData,
-} from "../../src/utils/functions";
+  simplifyStandings,
+} from '../../src/utils/functions';
 
-const Eredivisie = () => {
+function Eredivisie() {
   const [stand, setStand] = useState(undefined);
   const [topscorers, setTopscorers] = useState(undefined);
 
@@ -14,18 +14,18 @@ const Eredivisie = () => {
     async function fetchData() {
       try {
         const response = await fetch(
-          "https://v3.football.api-sports.io/standings?league=88&season=2023",
+          'https://v3.football.api-sports.io/standings?league=88&season=2023',
           {
-            method: "GET",
+            method: 'GET',
             headers: {
-              "x-apisports-key": "5c405472e5a7f42843553b0fe243477a",
+              'x-apisports-key': '5c405472e5a7f42843553b0fe243477a',
             },
-          }
+          },
         );
         const data = await response.json();
         setStand(simplifyStandings(data));
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     }
     fetchData();
@@ -33,18 +33,18 @@ const Eredivisie = () => {
     async function fetchTopscorers() {
       try {
         const response = await fetch(
-          "https://v3.football.api-sports.io/players/topscorers?league=88&season=2023",
+          'https://v3.football.api-sports.io/players/topscorers?league=88&season=2023',
           {
-            method: "GET",
+            method: 'GET',
             headers: {
-              "x-apisports-key": "5c405472e5a7f42843553b0fe243477a",
+              'x-apisports-key': '5c405472e5a7f42843553b0fe243477a',
             },
-          }
+          },
         );
         const data = await response.json();
         setTopscorers(simplifyPlayerData(data));
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error('Error fetching data:', error);
       }
     }
     fetchTopscorers();
@@ -57,33 +57,33 @@ const Eredivisie = () => {
   const correctPredictions = countCorrectPredictions(
     voorspellingen,
     stand,
-    topscorers.slice(0, 5)
+    topscorers.slice(0, 5),
   );
   const sortedPredictions = Object.entries(correctPredictions).sort(
-    (a, b) => b[1].count - a[1].count
+    (a, b) => b[1].count - a[1].count,
   );
 
   return (
     <div className="flex flex-col items-center gap-4 bg-white">
-      <h1 className="text-center text-4xl py-4">
+      <h1 className="py-4 text-center text-4xl">
         Aantal juiste Eredivisie voorspellingen
       </h1>
       {sortedPredictions.map(([person, prediction]) => {
         return (
-          <div key={person} className="text-center border-b-grey border-b">
+          <div key={person} className="border-b border-b-gray-500 text-center">
             <p className="text-xl">
               <strong>{person}</strong>: {prediction.count}
             </p>
-            <p>{prediction.predictions.join(", ")}</p>
+            <p>{prediction.predictions.join(', ')}</p>
           </div>
         );
       })}
       <div className="mt-24">
-        <p className="text-center text-xl mb-16">Voorspellingen</p>
+        <p className="mb-16 text-center text-xl">Voorspellingen</p>
         <div className="grid grid-cols-2 md:grid-cols-4">
           {Object.entries(voorspellingen).map(([naam, voorspelling]) => (
-            <div key={naam} className="py-4 px-8">
-              <strong className="mb-4 border-b-grey border-b block">
+            <div key={naam} className="px-8 py-4">
+              <strong className="mb-4 block border-b border-b-gray-500">
                 {naam}
               </strong>
               {Object.values(voorspelling.league).map((v, i) => (
@@ -102,11 +102,11 @@ const Eredivisie = () => {
         </div>
       </div>
       <div className="my-24 grid grid-cols-2 md:grid-cols-4">
-        <div className="py-4 px-8">
-          <p className="text-center border-b-grey border-b mb-4 mx-auto">
+        <div className="px-8 py-4">
+          <p className="mx-auto mb-4 border-b border-b-gray-500 text-center">
             Eredivisie stand
           </p>
-          {typeof stand === "string" ? (
+          {typeof stand === 'string' ? (
             <p className="text-center">
               Als je dit leest zijn de API calls voor vandaag op. Kom morgen
               terug&hellip;
@@ -119,14 +119,16 @@ const Eredivisie = () => {
             ))
           )}
         </div>
-        <div className="py-4 px-8">
-          <p className="text-center border-b-grey border-b mb-4 mx-auto">
+        <div className="px-8 py-4">
+          <p className="mx-auto mb-4 border-b border-b-gray-500 text-center">
             Top 5 Topscoorders
           </p>
           {Object.values(topscorers.slice(0, 5)).map((v, i) => (
             <div className="flex justify-between" key={v.lastname}>
-              <p>{i + 1}.&nbsp;
-              {v.lastname}</p>
+              <p>
+                {i + 1}.&nbsp;
+                {v.lastname}
+              </p>
               <p>{v.goalsScored}</p>
             </div>
           ))}
@@ -134,6 +136,6 @@ const Eredivisie = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Eredivisie;

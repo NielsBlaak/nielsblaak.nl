@@ -1,23 +1,19 @@
-import Phone from "../components/Phone";
-import Layout from "../components/Layout";
-import Image from "next/image";
-import clsx from "clsx";
+import Layout from './Layout';
 
-const HighlightApp = ({ image, className, title, description, years, showPhone }) => {
+function HighlightApp({ className, title, description, years }) {
   return (
-    <div className={clsx(className)}>
+    <div className={className}>
       <Layout>
-        {showPhone && <Phone image={image} />}
         <div className="ml-8 mt-4">
-          <h1 className="text-white font-bold text-4xl">{title}</h1>
-          <p className="text-white mt-2">{description}</p>
+          <h1 className="text-4xl font-bold text-white">{title}</h1>
+          <p className="mt-2 text-white">{description}</p>
         </div>
-        <span className="font-mono mt-4 mr-0 ml-auto text-white w-64">
+        <span className="ml-auto mr-0 mt-4 w-64 font-mono text-white">
           {years}
         </span>
       </Layout>
     </div>
   );
-};
+}
 
 export default HighlightApp;

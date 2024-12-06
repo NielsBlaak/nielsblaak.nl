@@ -1,28 +1,23 @@
-const { transparent } = require("tailwindcss/colors");
-const colors = require("tailwindcss/colors");
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    // Or if using `src` directory:
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    './src/**/*.{js,ts,jsx,tsx}', // Supports the `src` directory
   ],
   theme: {
     extend: {
       colors: {
-        colors,
-        hatsa: "#0A344F",
+        hatsa: '#0A344F', // Add your custom color
       },
       animation: {
-        blingking: "blink-caret .65s step-end infinite;",
+        blinking: 'blink-caret 0.65s step-end infinite', // Fixed typo and removed extra semicolon
       },
       keyframes: {
-        "blink-caret": {
-          "0%, 100%": { "border-color": transparent },
-          "50%": { "border-color": colors.black },
+        'blink-caret': {
+          '0%, 100%': { borderColor: 'transparent' }, // Adjusted syntax for modern JS
+          '50%': { borderColor: '#000' }, // Use Tailwind's color system
         },
       },
     },
