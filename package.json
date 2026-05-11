@@ -11,7 +11,7 @@
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore"
   },
   "dependencies": {
-    "next": "15.0.7",
+    "next": "15.5.18",
     "react": "latest",
     "react-dom": "latest"
   },
