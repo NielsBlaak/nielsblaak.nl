@@ -1,6 +1,6 @@
-import HighlightApp from "../src/components/HighlightApp";
+import HighlightApp from '../src/components/HighlightApp';
 
-function App() {
+export default function HomePage() {
   return (
     <div className="bg-white">
       <HighlightApp
@@ -18,5 +18,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

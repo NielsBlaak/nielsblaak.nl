@@ -1,4 +1,4 @@
-function Audio() {
+export default function CodePage() {
   return (
     <div className="flex flex-col items-center gap-4 bg-white">
       <h1 className="py-4 text-center text-4xl">Wat hoor je?</h1>
@@ -8,5 +8,3 @@ function Audio() {
     </div>
   );
 }
-
-export default Audio;
