@@ -1,5 +1,4 @@
-import React from 'react';
-import HighlightApp from '../src/components/HighlightApp';
+import HighlightApp from "../src/components/HighlightApp";
 
 function App() {
   return (

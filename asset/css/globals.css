@@ -1,9 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-hatsa: #0A344F;
+  --animate-blinking: blink-caret 0.65s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #000; }
+}
 
 html, body, #__next {
   margin: 0;
@@ -11,5 +18,4 @@ html, body, #__next {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-
 }
