@@ -1,21 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Heebo&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Handlee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Nunito:wght@400;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
+  --color-jex: #4C2368;
   --color-hatsa: #0A344F;
+  --color-coral: #FF6B6B;
+  --color-teal: #4ECDC4;
+  --color-sunshine: #FFE66D;
+  --color-grape: #6C5CE7;
+  --color-mint: #00B894;
+  --color-warm: #FFFBF5;
+
+  --font-heading: 'Lilita One', cursive;
+  --font-body: 'Nunito', sans-serif;
+
+  --animate-fade-up: fade-up 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-float: float 4s ease-in-out infinite;
   --animate-blinking: blink-caret 0.65s step-end infinite;
+  --animate-wave: wave-flow 7s linear infinite;
+  --animate-wave-back: wave-flow-back 11s linear infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes wave-flow {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes wave-flow-back {
+  from { transform: translateX(-50%); }
+  to { transform: translateX(0); }
 }
 
 @keyframes blink-caret {
   0%, 100% { border-color: transparent; }
-  50% { border-color: #000; }
+  50% { border-color: currentColor; }
 }
 
 html, body {
   margin: 0;
-  font-family: 'Heebo', sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
+  background-color: #FFFBF5;
 }
